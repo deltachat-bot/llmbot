@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmbot"
+description = "Conversational chatbot for Delta Chat using local LLM"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["deltachat", "bot", "llm"]
+authors = [
+  {email = "link2xt@testrun.org"},
+  {name = "link2xt"}
+]
+version = "0.1"
+dependencies = [
+  "deltabot-cli",
+  "llama-cpp-python",
+  "deltachat-rpc-server",
+]
+
+[project.scripts]
+llmbot = "llmbot:main"
+
+[tool.isort]
+profile = "black"
